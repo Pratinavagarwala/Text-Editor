@@ -18,7 +18,25 @@ function f4() {
 	document.getElementById("textarea1").style.textAlign = "center";
 }
 
+function f5() {
+	//function to make the text alignment right using DOM method
+	document.getElementById("textarea1").style.textAlign = "right";
+}
 
+function f6() {
+	//function to make the text in Uppercase using DOM method
+	document.getElementById("textarea1").style.textTransform = "uppercase";
+}
+
+function f7() {
+	//function to make the text in Lowercase using DOM method
+	document.getElementById("textarea1").style.textTransform = "lowercase";
+}
+
+function f8() {
+	//function to make the text capitalize using DOM method
+	document.getElementById("textarea1").style.textTransform = "capitalize";
+}
 
 function f9() {
 	//function to make the text back to normal by removing all the methods applied
