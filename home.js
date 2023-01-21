@@ -46,4 +46,34 @@ function f9() {
 	document.getElementById("textarea1").style.fontStyle = "normal";
 	document.getElementById("textarea1").style.textTransform = "capitalize";
 	document.getElementById("textarea1").value = " ";
-}
+};
+let copyButton = document.getElementsByTagName('button');
+  copyButton.addEventListener('click', function () {
+      navigator.clipboard
+          .writeText(document.getElementById('copy-text-input').value)
+          .then(
+              success => console.log("text copied"), 
+              err => console.log("error copying text")
+          );
+  });
+document.addEventListener('DOMContentLoaded',function(){
+  let copyButton = document.getElementsByTagName('button');
+      copyButton.addEventListener('click', function () {
+          navigator.clipboard
+              .writeText(document.getElementById('copy-text').innerText)
+              .then(
+                  success => console.log("text copied"), err => console.log("error copying text")
+              );
+      });
+});
+document.addEventListener('DOMContentLoaded',function(){
+            let pasteButton = document.getElementsByTagName('button')[0];
+            pasteButton.addEventListener('click', function () {
+                navigator.clipboard
+                    .readText()
+                    .then(
+                        cliptext =>
+                            (document.getElementById('clipboard-paste').innerText = cliptext),
+                            err => console.log(err)
+                    );
+            });
